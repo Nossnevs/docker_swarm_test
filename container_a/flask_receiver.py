@@ -5,8 +5,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    msg_id = request.args.get('id', '')
-    print('Received from ' + request.remote_addr + ' id:' + str(msg_id), flush=True)
+    msg_id = request.args.get('msg_id', '')
+    print('Received from ' + request.remote_addr + ' msg_id:' + str(msg_id), flush=True)
     return "id:" + str(msg_id)
 
 
